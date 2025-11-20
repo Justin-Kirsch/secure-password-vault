@@ -3,6 +3,18 @@
 A JavaFX application that combines a secure password generator with an encrypted password manager.  
 All stored entries are encrypted on disk using a master password. The master password itself is **never** stored in plaintext.
 
+## Screenshots
+
+- **Password generator**
+
+<img width="486" height="433" alt="grafik" src="https://github.com/user-attachments/assets/f0e04081-4c71-4876-bc17-13a6962a4076" />
+
+
+- **Password manager**
+
+<img width="492" height="462" alt="grafik" src="https://github.com/user-attachments/assets/04462aea-451c-4d58-a142-dddd96db63ba" />
+
+
 ## Features
 
 - **Password generator**
