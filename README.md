@@ -7,12 +7,13 @@ All stored entries are encrypted on disk using a master password. The master pas
 
 - **Password generator**
 
-<img width="486" height="433" alt="grafik" src="https://github.com/user-attachments/assets/f0e04081-4c71-4876-bc17-13a6962a4076" />
+<img width="480" height="430" alt="grafik" src="https://github.com/user-attachments/assets/228cf6f8-8051-4db9-8512-c4ebfb0ade18" />
+
 
 
 - **Password manager**
 
-<img width="492" height="462" alt="grafik" src="https://github.com/user-attachments/assets/04462aea-451c-4d58-a142-dddd96db63ba" />
+<img width="480" height="430" alt="grafik" src="https://github.com/user-attachments/assets/04462aea-451c-4d58-a142-dddd96db63ba" />
 
 
 ## Features
