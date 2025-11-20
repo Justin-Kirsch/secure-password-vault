@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.layout.VBox;
@@ -192,6 +193,7 @@ public class PasswordManagerController {
     protected void onCloseClick() {
         // Get the current stage (window) and close it
         Stage stage = (Stage) passwordTable.getScene().getWindow();
+        applyWindowIcon(stage);
         stage.close();
     }
 
@@ -200,6 +202,7 @@ public class PasswordManagerController {
     protected void onOpenGeneratorClick() {
         // Logic to close the manager window (returning to generator if it's still open)
         Stage stage = (Stage) passwordTable.getScene().getWindow();
+        applyWindowIcon(stage);
         stage.close();
     }
 
@@ -216,6 +219,8 @@ public class PasswordManagerController {
                 "Created by Justin Kirsch\n" +
                 "\n" +
                 securityInfo);
+        Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+        applyWindowIcon(alertStage);
         alert.showAndWait();
     }
 
@@ -224,6 +229,7 @@ public class PasswordManagerController {
         Stage dialog = new Stage();
         dialog.setTitle("Change master password");
         dialog.initModality(Modality.APPLICATION_MODAL);
+        applyWindowIcon(dialog);
 
         Label lblOld = new Label("Current Master-Password:");
         PasswordField pfOld = new PasswordField();
@@ -475,5 +481,11 @@ public class PasswordManagerController {
                 .replace("\\n", "\n")
                 .replace("\\\"", "\"")
                 .replace("\\\\", "\\");
+    }
+
+    private void applyWindowIcon(Stage stage) {
+        stage.getIcons().add(
+                new Image(getClass().getResourceAsStream("/icons/icon.png"))
+        );
     }
 }

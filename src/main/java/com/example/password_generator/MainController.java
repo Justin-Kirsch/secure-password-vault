@@ -159,6 +159,8 @@ public class MainController {
                         "Created by Justin Kirsch\n" +
                         "\n" +
                         securityInfo);
+        Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+        applyWindowIcon(alertStage);
         alert.showAndWait();
     }
 
@@ -187,9 +189,7 @@ public class MainController {
 
             // Window positioning and styling
             Stage currentStage = (Stage) passwordLengthSlider.getScene().getWindow();
-            managerStage.getIcons().add(
-                    new Image(getClass().getResourceAsStream("/icons/icon.png"))
-            );
+            applyWindowIcon(managerStage);
 
             managerStage.setX(currentStage.getX() + currentStage.getWidth());
             managerStage.setY(currentStage.getY());
@@ -242,6 +242,7 @@ public class MainController {
         setupStage.setTitle("Setup Master Password");
         // Blocks interaction with the main window until closed
         setupStage.initModality(Modality.APPLICATION_MODAL);
+        applyWindowIcon(setupStage);
 
         Label lbl = new Label("Create a new Master Password:");
         PasswordField pf = new PasswordField();
@@ -339,6 +340,7 @@ public class MainController {
         Stage loginStage = new Stage();
         loginStage.setTitle("Login");
         loginStage.initModality(Modality.APPLICATION_MODAL);
+        applyWindowIcon(loginStage);
 
         Label lbl = new Label("Enter Master Password:");
         PasswordField pf = new PasswordField();
@@ -421,5 +423,9 @@ public class MainController {
         }
     }
 
-
+    private void applyWindowIcon(Stage stage) {
+        stage.getIcons().add(
+                new Image(getClass().getResourceAsStream("/icons/icon.png"))
+        );
+    }
 }
