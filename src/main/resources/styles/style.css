@@ -1,0 +1,46 @@
+.check-box {
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.check-box .box {
+    -fx-border-color: #4169E1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-pref-width: 15px;
+    -fx-pref-height: 15px;
+}
+
+#passwordLengthInfoBox {
+    -fx-padding: 0px, 0px, 0px, 0px;
+}
+
+#vSeparator {
+    -fx-padding: 12px, 0px, 12px, 0px;
+}
+
+#hbox {
+    -fx-background-color: #e8e8e8;
+    -fx-border-color: #303030;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-background-radius: 8;
+    -fx-padding: 12px, 0px, 12px, 0px;
+}
+
+#passwordLengthSlider {
+    -fx-padding: 20px 0px 0px 0px;
+}
+
+.check-box:selected .box .mark {
+    -fx-background-color: white;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #4169E1;
+}
+
+.check-box .text {
+    -fx-text-fill: #333333;
+    -fx-font-weight: bold;
+}
